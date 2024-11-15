@@ -8,6 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarHeader,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { IPathnameInfo } from "@/interfaces/interfaces";
@@ -15,6 +16,8 @@ import { pathsInfo } from "@/data/paths-info";
 import { topics } from "@/data/topics";
 
 export default function CustomSidebar({ currentPath }: { currentPath: IPathnameInfo | null }) {
+  const { setOpenMobile } = useSidebar();
+
   return (
     <Sidebar>
       <SidebarHeader className="px-4 pt-6">
@@ -30,7 +33,7 @@ export default function CustomSidebar({ currentPath }: { currentPath: IPathnameI
               {topics.map((topic) => (
                 <SidebarMenuItem key={topic.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={`/${currentPath?.url}/${topic.name}`}>
+                    <Link href={`/${currentPath?.url}/${topic.name}`} onClick={() => setOpenMobile(false)}>
                       <span>{topic.title}</span>
                     </Link>
                   </SidebarMenuButton>

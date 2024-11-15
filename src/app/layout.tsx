@@ -1,9 +1,16 @@
+import { Inter } from 'next/font/google'
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import { PathnameInfoProvider } from "@/context/pathname-context";
+ 
+// If loading a variable font, you don't need to specify the font weight
+const openSans = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "FisiQAI",
 };
 
 export default function RootLayout({
@@ -14,7 +21,8 @@ export default function RootLayout({
   return (
     <PathnameInfoProvider>
       <html lang="es">
-        <body className="antialiased">{children}</body>
+        <body className={`${openSans.className} antialiased`}>{children}</body>
+        {/* <body>{children}</body> */}
       </html>
     </PathnameInfoProvider>
   );
