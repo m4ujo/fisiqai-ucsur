@@ -17,9 +17,6 @@ import { TOPICS } from "@/data/topics";
 
 export default function CustomSidebar({ currentPath }: { currentPath: IPathnameInfo | null }) {
   const { setOpenMobile } = useSidebar();
-
-  console.log(currentPath?.url);
-
   return (
     <Sidebar>
       <SidebarHeader className="px-4 pt-6">

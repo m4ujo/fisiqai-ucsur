@@ -12,7 +12,9 @@ export default function GuiaResolucionPage() {
   const [result, setResult] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-  const apiURL = "http://localhost:8000/generate_resolution";
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+
+  const apiURL = `https://fisiqai-backend.onrender.com/generate_resolution`;
 
   const handleGenerateResolution = async () => {
     if (!text.trim()) {

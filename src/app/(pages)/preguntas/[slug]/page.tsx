@@ -15,7 +15,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> }) 
   params.then((file) => setFile(file.slug));
   const topicTitle = TOPICS.find((topic) => topic.name === file)?.title;
 
-  const apiUrl = topicTitle ? `http://localhost:8000/generate_questions/topic=${encodeURIComponent(topicTitle)}` : "";
+  const apiUrl = topicTitle ? `https://fisiqai-backend.onrender.com/generate_questions/topic=${encodeURIComponent(topicTitle)}` : "";
 
   const handleChangeQuestions = async () => {
     if (!apiUrl) return;
