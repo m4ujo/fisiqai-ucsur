@@ -10,7 +10,7 @@ import CalculadoraIcon from "./icons/calculadora-icon";
 export default function CustomCard({ routeProps }: { routeProps: IPathnameInfo }) {
   return (
     <Link href={routeProps.url}>
-      <Card className="py-3 h-full hover:bg-card-hover max-w-xl">
+      <Card className="py-3 h-full hover:bg-card-hover max-w-md">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 font-bold">
             {routeProps.url === "formulas" ? (

@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { IPathnameInfo } from "@/interfaces/interfaces";
-import { pathsInfo } from "@/data/paths-info";
+import { PATHS_INFO } from "@/data/paths-info";
 
 interface IPathnameInfoContext {
   currentPathInfo: IPathnameInfo | null;
@@ -17,7 +17,7 @@ export function PathnameInfoProvider({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     // Actualiza el estado basado en la ruta
-    const pathInfo = pathsInfo.find((a) => pathname.includes(a.url)) || null;
+    const pathInfo = PATHS_INFO.find((a) => pathname.includes(a.url)) || null;
     setCurrentPathInfo(pathInfo);
   }, [pathname]);
 

@@ -3,7 +3,7 @@ import CardList from "@/components/card-list";
 
 export default function Home() {
   return (
-    <div className="lg:max-w-7xl mx-auto">
+    <div className="lg:max-w-8xl mx-auto">
       <main className="px-5 pt-5 pb-10 sm:h-screen grid place-content-center">
         <h1 className="mb-2 font-black leading-none text-[100px] text-center">
           FisiQ
@@ -13,7 +13,6 @@ export default function Home() {
           Repasa <GradientText text="física" /> de forma <GradientText text="inteligente" /> y sin{" "}
           <GradientText text="complicaciones" />
         </p>
-
         <CardList />
       </main>
     </div>

@@ -39,6 +39,8 @@
     --sidebar-accent-foreground: 207 52% 96%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --error: 0 68% 85%;
+    --success: 122 37% 84%;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -77,6 +79,8 @@
       --sidebar-accent-foreground: 240 4.8% 95.9%;
       --sidebar-border: 240 3.7% 15.9%;
       --sidebar-ring: 217.2 91.2% 59.8%;
+      --error: 0 65% 51%;
+      --success: 123 43% 37%;
     }
   }
 }
@@ -165,4 +169,10 @@
 
 .md table tr:nth-of-type(odd) {
   background-color: hsl(var(--card-hover));
+}
+
+.md blockquote {
+  background-color: hsl(var(--card));
+  border-radius: 5px;
+  padding: 2rem;
 }

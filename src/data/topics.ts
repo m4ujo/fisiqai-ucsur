@@ -1,9 +1,9 @@
 import { ITopic } from "@/interfaces/interfaces";
 
-export const topics: ITopic[] = [
+export const TOPICS: ITopic[] = [
   {
     id: 0,
-    title: "Magnitudes",
+    title: "Magnitudes Físicas",
     name: "magnitudes",
   },
   {
@@ -31,9 +31,9 @@ export const topics: ITopic[] = [
     title: "Movimiento Parabólico",
     name: "mp",
   },
-  {
-    id: 6,
-    title: "MCU - MCUV",
-    name: "mcu",
-  },
+  // {
+  //   id: 6,
+  //   title: "MCU",
+  //   name: "mcu",
+  // },
 ];

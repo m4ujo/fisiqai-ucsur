@@ -1,37 +1,22 @@
-import { IPathnameInfo, ITopic } from "@/interfaces/interfaces";
+import { IPathnameInfo } from "@/interfaces/interfaces";
 
-// export const pathsInfo: PathnameInfo[] = [
-//   {
-//     title: "Fórmulas",
-//     url: "formulas",
-//     description:
-//       "Descubre y comprende fórmulas clave de física en temas como Caída Libre y Movimiento Parabólico, con ejemplos y explicaciones para facilitar su aplicación.",
-//   },
-//   {
-//     title: "Preguntas",
-//     url: "preguntas",
-//     description:
-//       "Pon a prueba tus conocimientos en física con preguntas de IA. Elige temas como MRU y MVCL y practica con preguntas dinámicas de opción múltiple.",
-//   },
-//   {
-//     title: "Calculadora",
-//     url: "calculadora",
-//     description:
-//       "Simplifica tus cálculos físicos con nuestra calculadora para resolver problemas, obteniendo resultados instantáneos y facilitando tu aprendizaje.",
-//   },
-// ];
-
-export const pathsInfo: IPathnameInfo[] = [
+export const PATHS_INFO: IPathnameInfo[] = [
   {
     title: "Fórmulas",
     url: "formulas",
     description:
-      "Descubre y comprende fórmulas clave de física en temas como Caída Libre y Movimiento Parabólico, con ejemplos y explicaciones para facilitar su aplicación.",
+      "Descubre y comprende fórmulas clave de física en temas como Caída Libre y Movimiento Parabólico, con explicaciones para facilitar su aplicación.",
   },
   {
     title: "Preguntas",
     url: "preguntas",
     description:
-      "Pon a prueba tus conocimientos en física con preguntas de IA. Elige temas como MRU y MVCL y practica con preguntas dinámicas de opción múltiple.",
+      "Pon a prueba tus conocimientos en física con preguntas hechas por IA. Elige temas como MRU y MVCL y practica con preguntas dinámicas de opción múltiple.",
+  },
+  {
+    title: "Guía de Resolución de Problemas",
+    url: "guia-resolucion",
+    description:
+      "Describe tu problema de física y recibe orientación sobre cómo resolverlo. Aprende qué fórmulas usar y cómo aplicarlas para entender mejor los conceptos y abordar cada situación.",
   },
 ];

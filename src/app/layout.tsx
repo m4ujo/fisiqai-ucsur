@@ -22,7 +22,6 @@ export default function RootLayout({
     <PathnameInfoProvider>
       <html lang="es">
         <body className={`${openSans.className} antialiased`}>{children}</body>
-        {/* <body>{children}</body> */}
       </html>
     </PathnameInfoProvider>
   );

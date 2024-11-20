@@ -9,7 +9,7 @@ export default function MarkdownContent({ content }: { content: string }) {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-sm lg:max-w-3xl pt-10 pb-10">
+      <div className="w-full">
         <Markdown className="md" rehypePlugins={[rehypeKatex, rehypeRaw]} remarkPlugins={[remarkGfm, remarkMath]}>
           {content}
         </Markdown>

@@ -12,11 +12,13 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { IPathnameInfo } from "@/interfaces/interfaces";
-import { pathsInfo } from "@/data/paths-info";
-import { topics } from "@/data/topics";
+import { PATHS_INFO } from "@/data/paths-info";
+import { TOPICS } from "@/data/topics";
 
 export default function CustomSidebar({ currentPath }: { currentPath: IPathnameInfo | null }) {
   const { setOpenMobile } = useSidebar();
+
+  console.log(currentPath?.url);
 
   return (
     <Sidebar>
@@ -26,22 +28,26 @@ export default function CustomSidebar({ currentPath }: { currentPath: IPathnameI
         </Link>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Temas</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {topics.map((topic) => (
-                <SidebarMenuItem key={topic.title}>
-                  <SidebarMenuButton asChild>
-                    <Link href={`/${currentPath?.url}/${topic.name}`} onClick={() => setOpenMobile(false)}>
-                      <span>{topic.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        {currentPath?.url !== "guia-resolucion" ? (
+          <SidebarGroup>
+            <SidebarGroupLabel>Temas</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {TOPICS.map((topic) => (
+                  <SidebarMenuItem key={topic.title}>
+                    <SidebarMenuButton asChild>
+                      <Link href={`/${currentPath?.url}/${topic.name}`} onClick={() => setOpenMobile(false)}>
+                        <span>{topic.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        ) : (
+          <></>
+        )}
 
         <SidebarGroup>
           <SidebarGroupLabel>Otras funciones</SidebarGroupLabel>
@@ -55,7 +61,7 @@ export default function CustomSidebar({ currentPath }: { currentPath: IPathnameI
                 </SidebarMenuButton>
               </SidebarMenuItem>
 
-              {pathsInfo.map((route) => (
+              {PATHS_INFO.map((route) => (
                 <SidebarMenuItem key={route.title}>
                   <SidebarMenuButton asChild>
                     <Link href={`/${route.url}`}>

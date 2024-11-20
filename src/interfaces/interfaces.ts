@@ -1,7 +1,7 @@
 export interface IPathnameInfo {
   title: string;
   url: string;
-  description?: string;
+  description: string;
 }
 
 export interface ITopic {
@@ -13,4 +13,10 @@ export interface ITopic {
 export interface IMarkdownContent {
   file: string;
   content: string;
+}
+
+export interface IQuestion {
+  question: string;
+  options: string[];
+  answer: string;
 }

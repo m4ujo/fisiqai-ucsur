@@ -10,10 +10,14 @@ export default function PagesLayout({ children }: { children: React.ReactNode })
   return (
     <SidebarProvider>
       <CustomSidebar currentPath={currentPathInfo} />
-      <main className="w-full py-5 px-5 flex">
-        <SidebarTrigger />
-        <div className="w-full content-center">{children}</div>
-      </main>
+      <div className="w-full relative">
+        <div className="fixed">
+          <SidebarTrigger className="absolute top-4 left-3" />
+        </div>
+        <main className="w-full h-full py-5 px-5 flex">
+          <div className="w-full content-center">{children}</div>
+        </main>
+      </div>
     </SidebarProvider>
   );
 }
