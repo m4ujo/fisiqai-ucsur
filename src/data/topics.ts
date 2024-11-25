@@ -23,7 +23,7 @@ export const TOPICS: ITopic[] = [
   },
   {
     id: 4,
-    title: "MVCL",
+    title: "Movimiento Vertical de Caída Libre",
     name: "mvcl",
   },
   {
