@@ -9,10 +9,12 @@ export default function Home() {
           FisiQ
           <GradientText text="AI" />
         </h1>
+
         <p className="mb-8 font-medium text-[20px] text-center">
           Repasa <GradientText text="física" /> de forma <GradientText text="inteligente" /> y sin{" "}
           <GradientText text="complicaciones" />
         </p>
+
         <CardList />
       </main>
     </div>

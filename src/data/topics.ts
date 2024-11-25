@@ -31,9 +31,4 @@ export const TOPICS: ITopic[] = [
     title: "Movimiento Parabólico",
     name: "mp",
   },
-  // {
-  //   id: 6,
-  //   title: "MCU",
-  //   name: "mcu",
-  // },
 ];
